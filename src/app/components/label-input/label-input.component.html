@@ -1,0 +1,8 @@
+<div class="row">
+    <div *ngIf="!noLabel">
+        <label class="inline">{{itemLabel}}</label>
+    </div>
+    <div>
+        <input [name]="nameInput" [type]="inputType || 'text'" [required]="isRequired">
+    </div>
+</div>

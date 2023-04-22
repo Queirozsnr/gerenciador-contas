@@ -1,0 +1,28 @@
+<form [formGroup]="formulario" (submit)="onSubmit()">
+  <div id="newBill" class="container">
+    <div class="jumbotron">
+      <h2>Adicione uma nova conta</h2>
+      <div class="col">
+        <!-- <app-label-input inputType="text" formControlName="title" itemLabel="Nome:"></app-label-input> -->
+        <label>Idade:</label>
+        <input formControlName="title" type="text">
+
+        <label>Idade:</label>
+        <input formControlName="desc" type="text">
+
+        <label>Idade:</label>
+        <input formControlName="value" type="number" required>
+
+        <label>Idade:</label>
+        <input formControlName="date" type="date">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12" style="text-align: right;">
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </div>
+    </div>
+  </div>
+
+  <app-table [items]="items"></app-table>
+</form>

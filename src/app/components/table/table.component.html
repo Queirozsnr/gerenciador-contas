@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+      <tr *ngIf="items.length > 0">
+        <th scope="col">Titulo</th>
+        <th scope="col">Descrição</th>
+        <th scope="col">Valor</th>
+        <th scope="col">Data</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of items" scope="row">
+        <td>{{ item.title }}</td>
+        <td>{{ item.desc }}</td>
+        <td>R${{ item.value }}</td>
+        <td>{{ item.date }}</td>
+      </tr>
+      <p [hidden]="isEmpty()">Não há itens por aqui</p>
+    </tbody>
+  </table>
